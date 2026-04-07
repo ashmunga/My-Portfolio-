@@ -1,0 +1,18 @@
+.navbar li {
+  display: flex;
+  gap: 20px; /* space between items */
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+h1,
+p,
+.navbar {
+  font-family: "Roboto", sans-serif;
+}
+.text {
+  color: greenyellow;
+}
+body {
+  background-color: #f8f8f8;
+}

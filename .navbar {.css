@@ -1,0 +1,14 @@
+.navbar {
+  list-style: none;        /* remove bullets */
+  padding: 0;
+}
+
+.navbar li {
+  display: inline-block;   /* make horizontal */
+  margin-right: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+}let

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sentence Analyzer</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+      }
+      label,
+      textarea,
+      button {
+        display: block;
+        margin: 10px 0;
+      }
+      .result {
+        margin-top: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Sentence Analyzer</h1>
+    <label for="sentence">Enter a sentence (ending with a period):</label>
+    <textarea id="sentence" rows="3" cols="50"></textarea>
+    <button onclick="analyzeSentence()">Analyze</button>
+
+    <div class="result" id="output"></div>
+
+    <script>
+      function analyzeSentence() {
+        let sentence = document.getElementById("sentence").value;
+
+        let length = 0;
+        let words = 1; // assume at least one word
+        let vowels = 0;
+        let vowelSet = "aeiouAEIOU";
+
+        for (let i = 0; i < sentence.length; i++) {
+          let c = sentence[i];
+          length++;
+
+          if (c === " ") {
+            words++;
+          }
+          if (vowelSet.includes(c)) {
+            vowels++;
+          }
+        }
+
+        document.getElementById("output").innerHTML =
+          "Length of sentence: " +
+          length +
+          "<br>" +
+          "Number of words: " +
+          words +
+          "<br>" +
+          "Number of vowels: " +
+          vowels;
+      }
+    </script>
+  </body>
+</html>
